@@ -16,7 +16,8 @@ Defaults:
 - `vpc_security_group_ids` - VPC security group ID for cluster.
 - `db_subnet_group_name` - Subnet group name for cluster. Defaults to rds-main
 - `parameter_group_name` - Parameter group name for cluster. Defaults to default.mysql5.7
-- `allocated_storage` - The amount of storage for your RDS instance. Defaults to 10
+- `allocated_storage` - The amount of storage for the RDS instance. Defaults to 10
+- `storage_type` - The storage type for the RDS instance. Defaults to gp2
 - `backup_window` - The backup window for the instance. Defaults to 09:46-10:16
 
 Required:

@@ -61,6 +61,11 @@ variable "allocated_storage" {
   default = 10
 }
 
+variable "allocated_storage" {
+  description = "The storage type you want to use"
+  default = "gp2"
+}
+
 variable "backup_window" {
   description = "The backup window time"
   default = "09:46-10:16"

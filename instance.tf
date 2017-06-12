@@ -11,5 +11,6 @@ resource "aws_db_instance" "default" {
   db_subnet_group_name = "${var.db_subnet_group_name}"
   parameter_group_name = "${var.parameter_group_name}"
   allocated_storage = "${var.allocated_storage}"
+  storage_type = "${var.storage_type}"
   backup_window = "${var.backup_window}"
 }
