@@ -70,3 +70,8 @@ variable "backup_window" {
   description = "The backup window time"
   default = "09:46-10:16"
 }
+
+variable "backup_retention_period" {
+  description = "Retention period for backups"
+  default = 7
+}
