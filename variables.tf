@@ -22,7 +22,7 @@ variable "availability_zone" {
 
 variable "multi_az" {
   description = "Specifies if the RDS instance is multi-AZ"
-  default = yes
+  default = "yes"
 }
 
 variable "port" {
