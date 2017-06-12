@@ -60,3 +60,8 @@ variable "allocated_storage" {
   description = "The amount of storage you want"
   default = 10
 }
+
+variable "backup_window" {
+  description = "The backup window time"
+  default = "09:46-10:16"
+}
