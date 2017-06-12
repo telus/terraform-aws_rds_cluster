@@ -61,7 +61,7 @@ variable "allocated_storage" {
   default = 10
 }
 
-variable "allocated_storage" {
+variable "storage_type" {
   description = "The storage type you want to use"
   default = "gp2"
 }
