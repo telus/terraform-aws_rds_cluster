@@ -11,8 +11,7 @@ Defaults:
 - `engine` - The type of RDS isntance you want to use. Defaults to mysql
 - `engine_version` - The RDS version you want to use. Defaults to 5.7.17
 - `instance_class` - The RDS instance class. Defaults to db.m4.large
-- `availability_zone` - The availability zones your node will launch into. Defaults to ca-central-1a
-- `multi_az` - Specifies if the RDS instance is multi-AZ. Defaults to yes
+- `multi_az` - Specifies if the RDS instance is multi-AZ. Defaults to true
 - `port` - RDS port. Defaults to 3306
 - `vpc_security_group_ids` - VPC security group ID for cluster.
 - `db_subnet_group_name` - Subnet group name for cluster. Defaults to rds-main

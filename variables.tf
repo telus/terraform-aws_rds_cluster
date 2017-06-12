@@ -15,19 +15,19 @@ variable "aws_region" {
   default = "ca-central-1"
 }
 
-variable "availability_zone" {
-  description = "Availability zone you want to use"
-  default = "ca-central-1a"
-}
-
 variable "multi_az" {
   description = "Specifies if the RDS instance is multi-AZ"
-  default = "yes"
+  default = true
 }
 
 variable "port" {
   description = "Port number you want to use"
   default = 3306
+}
+
+variable "vpc_security_group_ids" {
+  description = "The security_group ids to attach the instance to"
+  default = "sg-caed2fa3"
 }
 
 variable "engine" {
@@ -45,9 +45,6 @@ variable "instance_class" {
   default = "db.m4.large"
 }
 
-variable "vpc_security_group_ids" {
-  description = "The security_group ids to attach the instance to"
-}
 
 variable "db_subnet_group_name" {
   description = "The subnet to launch the instance into"
