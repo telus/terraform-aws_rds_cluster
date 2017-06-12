@@ -6,6 +6,7 @@ resource "aws_db_instance" "default" {
   engine_version = "${var.engine_version}"
   instance_class = "${var.node_type}"
   availability_zone = "${var.availability_zone}"
+  multi_az = "${var.multi_az}"
   port = "${var.port}"
   vpc_security_group_ids = ["${var.vpc_security_group_ids}"]
   db_subnet_group_name = "${var.db_subnet_group_name}"

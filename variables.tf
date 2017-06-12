@@ -20,6 +20,11 @@ variable "availability_zone" {
   default = "ca-central-1a"
 }
 
+variable "multi_az" {
+  description = "Specifies if the RDS instance is multi-AZ"
+  default = yes
+}
+
 variable "port" {
   description = "Port number you want to use"
   default = 3306
@@ -56,4 +61,5 @@ variable "parameter_group_name" {
 
 variable "allocated_storage" {
   description = "The amount of storage you want"
+  default = 10
 }
