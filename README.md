@@ -44,7 +44,7 @@ module "instance" {
   name = "my-rds-instance"
   username = "my-username"
   password = "my-password"
-  node_type = "db.m4.large"
+  instance_class = "db.m4.large"
 }
 ```
 
