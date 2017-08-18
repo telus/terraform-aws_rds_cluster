@@ -75,3 +75,8 @@ variable "backup_retention_period" {
   description = "Retention period for backups"
   default = 7
 }
+
+variable "storage_encrypted" {
+  description = "Encryption for RDS instance"
+  default = true
+}

@@ -13,7 +13,8 @@ resource "aws_db_instance" "default" {
   allocated_storage = "${var.allocated_storage}"
   storage_type = "${var.storage_type}"
   backup_window = "${var.backup_window}"
-  backup_retention_period  = "${var.backup_retention_period }"
+  backup_retention_period  = "${var.backup_retention_period}"
+  storage_encrypted = "${var.storage_encrypted}"
 
   lifecycle {
      ignore_changes = ["password"]
