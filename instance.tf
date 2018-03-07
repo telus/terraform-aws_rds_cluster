@@ -3,7 +3,6 @@ resource "aws_db_instance" "default" {
   username = "${var.username}"
   password = "${var.password}"
   engine = "${var.engine}"
-  engine_version = "${var.engine_version}"
   instance_class = "${var.instance_class}"
   multi_az = "${var.multi_az}"
   port = "${var.port}"

@@ -35,11 +35,6 @@ variable "engine" {
   default = "mysql"
 }
 
-variable "engine_version" {
-  description = "Engine version you want to use"
-  default = "5.7.17"
-}
-
 variable "instance_class" {
   description = "Instance class you want to use"
   default = "db.m4.large"
