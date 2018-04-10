@@ -25,7 +25,7 @@ Defaults:
 Required:
 
 - `name` - Name of the RDS instance
-- `username` - Username for the RDS instance
+- `username` - Username for the RDS instance, max 16 characters
 - `password` - Password for the RDS instance
 
 # Module Outputs
