@@ -9,7 +9,7 @@ A terraform module for managing RDS instances
 Defaults:
 
 - `engine` - The type of RDS isntance you want to use. Defaults to mysql
-- `engine_version` - The RDS version you want to use. Defaults to 5.7.17
+- `engine_version` - The RDS version you want to use. Defaults to 5.7.23
 - `instance_class` - The RDS instance class. Defaults to db.m4.large
 - `multi_az` - Specifies if the RDS instance is multi-AZ. Defaults to true
 - `port` - RDS port. Defaults to 3306
