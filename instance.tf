@@ -1,5 +1,6 @@
 resource "aws_db_instance" "default" {
   name = "${var.name}"
+  identifier = "${var.name}"
   username = "${var.username}"
   password = "${var.password}"
   engine = "${var.engine}"
