@@ -15,7 +15,8 @@ resource "aws_db_instance" "default" {
   backup_window = "${var.backup_window}"
   backup_retention_period  = "${var.backup_retention_period}"
   storage_encrypted = "${var.storage_encrypted}"
-  final_snapshot_identifier = "${var.name}_final_snapshot"
+  final_snapshot_identifier = "${var.name}-final-snapshot"
+  
 
   lifecycle {
      ignore_changes = ["password"]
