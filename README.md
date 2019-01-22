@@ -40,7 +40,7 @@ You can use this in your terraform template with the following steps.
 
 ```
 module "instance" {
-  source = "git::ssh://git@github.com/telus/terraform-aws_rds_cluster?ref=v0.1.1"
+  source = "git::ssh://git@github.com/telus/terraform-aws_rds_cluster"
 
   name = "my-rds-instance"
   username = "my-username"
