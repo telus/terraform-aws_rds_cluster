@@ -2,6 +2,10 @@ variable "name" {
   description = "DB name you want to use"
 }
 
+variable "identifier" {
+  description = "The identifier for the RDS datastore"
+}
+
 variable "username" {
   description = "Database username you want to use"
 }

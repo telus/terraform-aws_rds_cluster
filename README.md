@@ -24,7 +24,8 @@ Defaults:
 
 Required:
 
-- `name` - Name of the RDS instance
+- `name` - Name of the RDS instance. Only lowercase and hyphen characters required
+- `identifier` - Identifier of the RDS instance. Alphanumeric (any case) but no hyphens allowed
 - `username` - Username for the RDS instance, max 16 characters
 - `password` - Password for the RDS instance
 
