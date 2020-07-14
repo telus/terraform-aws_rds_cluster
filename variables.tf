@@ -75,3 +75,7 @@ variable "storage_encrypted" {
   default     = true
 }
 
+variable "delete_automated_backups" {
+  description = "Delete automated backups when RDS instance is deleted"
+  default     = false
+
