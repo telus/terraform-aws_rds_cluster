@@ -22,6 +22,7 @@ Defaults:
 - `backup_retention_period` - The retention period for backups. Defaults to 7
 - `storage_encrypted` - Ensure your database data is encrypted at rest. Default to true
 - `delete_automated_backups` - Remove your database snapshots automatically when the RDS instance is deleted. Defaults to false
+- `deletion_protection` - Set deletion protection on the instance. Defaults to true 
 
 Required:
 
