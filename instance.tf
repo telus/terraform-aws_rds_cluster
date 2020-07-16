@@ -23,4 +23,3 @@ resource "aws_db_instance" "default" {
     ignore_changes = [password]
   }
 }
-
