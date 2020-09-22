@@ -84,3 +84,18 @@ variable "deletion_protection" {
   description = "Set deletion protection on the instance"
   default     = true
 }
+
+variable "monitoring_interval" {
+  description = "The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance."
+  default     = 30
+}
+
+variable "performance_insights_enabled" {
+  description = "Specifies whether Performance Insights are enabled"
+  default     = true
+}
+
+variable "performance_insights_retention_period" {
+  description = "The amount of time in days to retain Performance Insights data"
+  default     = 7
+}

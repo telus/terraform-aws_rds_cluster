@@ -23,6 +23,9 @@ Defaults:
 - `storage_encrypted` - Ensure your database data is encrypted at rest. Default to true
 - `delete_automated_backups` - Remove your database snapshots automatically when the RDS instance is deleted. Defaults to false
 - `deletion_protection` - Set deletion protection on the instance. Defaults to true 
+- `monitoring_interval` - The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. Defaults to 30
+- `performance_insights_enabled` - Specifies whether Performance Insights are enabled. Defaults to true
+- `performance_insights_retention_period` - The amount of time in days to retain Performance Insights data. Defaults to 7
 
 Required:
 
