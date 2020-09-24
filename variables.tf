@@ -92,7 +92,7 @@ variable "monitoring_interval" {
 
 variable "performance_insights_enabled" {
   description = "Specifies whether Performance Insights are enabled"
-  default     = true
+  default     = false
 }
 
 variable "performance_insights_retention_period" {
