@@ -25,7 +25,6 @@ Defaults:
 - `deletion_protection` - Set deletion protection on the instance. Defaults to true 
 - `monitoring_interval` - The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. Defaults to 30
 - `performance_insights_enabled` - Specifies whether Performance Insights are enabled. Defaults to false. 
-- `performance_insights_retention_period` - The amount of time in days to retain Performance Insights data. Defaults to 7
 
 Required:
 
