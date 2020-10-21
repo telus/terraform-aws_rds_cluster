@@ -49,9 +49,9 @@ resource "aws_db_instance" "default" {
   monitoring_interval                   = var.monitoring_interval
   monitoring_role_arn                   = aws_iam_role.enhanced_monitoring.arn
   performance_insights_enabled          = var.performance_insights_enabled
+  performance_insights_retention_period = var.performance_insights_enabled == true ? var.performance_insights_retention_period : null
 
   lifecycle {
     ignore_changes = [password]
   }
 }
-
