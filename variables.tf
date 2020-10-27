@@ -126,6 +126,12 @@ variable "alarm_threshold_swap" {
   default     = 0
 }
 
+variable "alarm_threshold_freeable_memory" {
+  description = "Threshold for swap alarm"
+  type        = number
+  default     = 64000000 # 64 Megabyte in Byte
+}
+
 variable "alarm_sns_topic" {
   description = "SNS Topic used for alarms"
   default     = "arn:aws:sns:ca-central-1:202758669767:db_alarms" # Configured in DataVPC repo: https://github.com/telus/terraform-openshift-datavpc-main/blob/master/aws-sns-alarms.tf
