@@ -100,3 +100,32 @@ variable "performance_insights_retention_period" {
   description = "The amount of time in days to retain Performance Insights data"
   default     = 7
 }
+
+variable "alarm_threshold_cpu" {
+  description = "Threshold for cpu alarm in %"
+  type        = number
+  default     = 80
+}
+
+variable "alarm_threshold_memory" {
+  description = "Memory in percent"
+  type        = number
+  default     = 80
+}
+
+variable "alarm_threshold_disk_queue_depth" {
+  description = "Threshold for disk queue depth alarm"
+  type        = number
+  default     = 0
+}
+
+variable "alarm_threshold_swap" {
+  description = "Threshold for swap alarm"
+  type        = number
+  default     = 0
+}
+
+variable "alarm_sns_topic" {
+  description = "SNS Topic used for alarms"
+  default     = "arn:aws:sns:ca-central-1:202758669767:db_alarms" # Configured in DataVPC repo: https://github.com/telus/terraform-openshift-datavpc-main/blob/master/aws-sns-alarms.tf
+}
