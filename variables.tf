@@ -107,12 +107,6 @@ variable "alarm_threshold_cpu" {
   default     = 80
 }
 
-variable "alarm_threshold_memory" {
-  description = "Memory in percent"
-  type        = number
-  default     = 80
-}
-
 variable "alarm_threshold_disk_queue_depth" {
   description = "Threshold for disk queue depth alarm"
   type        = number
