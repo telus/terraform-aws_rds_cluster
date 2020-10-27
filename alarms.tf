@@ -18,26 +18,6 @@ resource "aws_cloudwatch_metric_alarm" "rds_alarm_cpu" {
   }
 }
 
-resource "aws_cloudwatch_metric_alarm" "rds_alarm_memory" {
-  alarm_name          = "rds-alarm-memory-${var.name}"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 1
-  metric_name         = "DatabaseMemoryUsagePercentage"
-  namespace           = "AWS/RDS"
-  period              = 60
-  threshold           = var.alarm_threshold_memory
-  statistic           = "Average"
-  alarm_actions = [
-    var.alarm_sns_topic,
-  ]
-  ok_actions = [
-    var.alarm_sns_topic,
-  ]
-  dimensions = {
-    DBInstanceIdentifier = var.name
-  }
-}
-
 resource "aws_cloudwatch_metric_alarm" "rds_alarm_disk_queue_depth" {
   alarm_name          = "rds-alarm-disk-queue-depth-${var.name}"
   comparison_operator = "GreaterThanThreshold"
