@@ -117,7 +117,7 @@ variable "alarm_threshold_memory" {
 variable "alarm_threshold_disk_queue_depth" {
   description = "Threshold for disk queue depth alarm"
   type        = number
-  default     = 0
+  default     = 64
 }
 
 variable "alarm_threshold_swap" {
