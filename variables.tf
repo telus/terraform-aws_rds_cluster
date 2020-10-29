@@ -125,6 +125,11 @@ variable "alarm_threshold_freeable_memory" {
   default     = 64000000 # 64 Megabyte in Byte
 }
 
+variable "alarm_threshold_free_storage_space" {
+  description = "Threshold for free storage space"
+  default     = 100000000 # 100 Megabyte in Byte
+}
+
 variable "alarm_sns_topic" {
   description = "SNS Topic used for alarms"
   default     = "arn:aws:sns:ca-central-1:202758669767:db_alarms" # Configured in DataVPC repo: https://github.com/telus/terraform-openshift-datavpc-main/blob/master/aws-sns-alarms.tf

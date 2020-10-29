@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_metric_alarm" "rds_alarm_cpu" {
   alarm_name          = "rds-alarm-cpu-${var.name}"
   comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 1
+  evaluation_periods  = 2
   metric_name         = "CPUUtilization"
   namespace           = "AWS/RDS"
   period              = 60
@@ -21,7 +21,7 @@ resource "aws_cloudwatch_metric_alarm" "rds_alarm_cpu" {
 resource "aws_cloudwatch_metric_alarm" "rds_alarm_disk_queue_depth" {
   alarm_name          = "rds-alarm-disk-queue-depth-${var.name}"
   comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 1
+  evaluation_periods  = 2
   metric_name         = "DiskQueueDepth"
   namespace           = "AWS/RDS"
   period              = 600
@@ -57,14 +57,35 @@ resource "aws_cloudwatch_metric_alarm" "rds_alarm_swap" {
     DBInstanceIdentifier = var.name
   }
 }
+
 resource "aws_cloudwatch_metric_alarm" "rds_alarm_freeable_memory" {
   alarm_name          = "rds-alarm-freeable-memory-${var.name}"
   comparison_operator = "LessThanThreshold"
-  evaluation_periods  = 1
+  evaluation_periods  = 2
   metric_name         = "FreeableMemory"
   namespace           = "AWS/RDS"
   period              = 300
   threshold           = var.alarm_threshold_freeable_memory
+  statistic           = "Average"
+  alarm_actions = [
+    var.alarm_sns_topic,
+  ]
+  ok_actions = [
+    var.alarm_sns_topic,
+  ]
+  dimensions = {
+    DBInstanceIdentifier = var.name
+  }
+}
+
+resource "aws_cloudwatch_metric_alarm" "rds_alarm_free_storage_space" {
+  alarm_name          = "rds-alarm-free-storage-space-${var.name}"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = 2
+  metric_name         = "FreeStorageSpace"
+  namespace           = "AWS/RDS"
+  period              = 300
+  threshold           = var.alarm_threshold_free_storage_space
   statistic           = "Average"
   alarm_actions = [
     var.alarm_sns_topic,
