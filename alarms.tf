@@ -80,7 +80,7 @@ resource "aws_cloudwatch_metric_alarm" "rds_alarm_freeable_memory" {
 
 resource "aws_cloudwatch_metric_alarm" "rds_alarm_free_storage_space" {
   alarm_name          = "rds-alarm-free-storage-space-${var.name}"
-  comparison_operator = "GreaterThanThreshold"
+  comparison_operator = "LessThanThreshold"
   evaluation_periods  = 2
   metric_name         = "FreeStorageSpace"
   namespace           = "AWS/RDS"
