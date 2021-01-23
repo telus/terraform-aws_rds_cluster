@@ -1,5 +1,10 @@
 variable "name" {
   description = "DB name you want to use"
+
+  validation {
+    condition     = can(regex("[a-zA-Z][a-zA-Z0-9]*", var.name))
+    error_message = "DBName must begin with a letter and contain only alphanumeric characters."
+  }
 }
 
 variable "username" {
@@ -8,6 +13,11 @@ variable "username" {
 
 variable "password" {
   description = "Database password you want to use"
+
+  validation {
+    condition     = can(regex("^[a-zA-Z0-9~!#$%^;:,.<>?'`\/\\\&\*\-\_\=\+\(\)\[\]\{\}\|]+$", var.password))
+    error_message = "The parameter password is not valid. Only printable ASCII characters besides '/', '@', '\"', ' ' may be used."
+  }
 }
 
 variable "aws_region" {
